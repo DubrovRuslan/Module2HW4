@@ -1,4 +1,6 @@
-﻿namespace Module2HW4.Models
+﻿using Module2HW4.Models.Enums;
+
+namespace Module2HW4.Models
 {
     public abstract class Bird : WarmBlooded
     {

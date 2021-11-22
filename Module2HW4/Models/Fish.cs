@@ -6,5 +6,6 @@ namespace Module2HW4.Models
     {
         public WaterType HabitatWaterType { get; set; }
         public int HabitatDepth { get; set; }
+        public override AnimalType CurrentAnimalType { get; } = AnimalType.Fish;
     }
 }
