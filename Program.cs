@@ -5,8 +5,14 @@ using Module2HW4.Providers.Abstractions;
 using Module2HW4.Services.Abstractions;
 
 var serviceProvider = new ServiceCollection()
-                .AddTransient<IAnimalsProvider, AminalsProvider>()
+                .AddSingleton<IAnimalsProvider, AminalsProvider>()
                 .AddSingleton<IAnimalService, AnimalService>()
+                .AddSingleton<IFishService, FishService>()
+                .AddSingleton<IFlyingHighBirdService, FlyingHighBirdService>()
+                .AddSingleton<IHerbivoreService, HerbivoreService>()
+                .AddSingleton<IPredatorService, PredatorService>()
+                .AddSingleton<IReptileService, ReptileService>()
+                .AddSingleton<IRunningFarBirdService, RunningFarBirdService>()
                 .AddSingleton<IConsoleNotificator, ConsoleNotificator>()
                 .AddSingleton<INotificationService, NotificationService>()
                 .AddTransient<Module2HW4.Starter>()
